@@ -3,19 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-Poppins-sans: "Poppins", sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  font-family: var(--font-Poppins-sans);
+}
+
+.custom-marker-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border: 2px solid #4caf50; /* Add a border */
+  border-radius: 50%;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  font-size: 16px;
+  color: #4caf50; /* Icon color */
+  text-align: center;
+}
+
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
